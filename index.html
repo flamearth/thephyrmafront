@@ -1,26 +1,167 @@
 <!doctype html>
-<html lang="ru">
+
+<html language="english" view="dark">
 <head>
     
   <meta charset="utf-8">
-  <title>test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+  <title>Deals</title>
+  
   <style>
       
-    html, body {
+      html {
+          width: 100%;
+          height: 100%;
+          display: block;
+          background: #2c2c2c;
+          color: #ffffff;
+          font-size: 21px;
+          font-weight: 300;
+          font-family: sans-serif;  }
+
+      * {
+        box-sizing: border-box;
+      }
+      
+      body {
+          width: 100%;
+          
+          
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          
+          background: #2c2c2c;
+          
+          padding: 0px;
+          margin: 0px;
+          gap: 0px;
+          
+          position: static;
+          z-index: auto; }
+
+      .space-between {
+          
+          width: 100%;
+          height: auto;
+          
+          display: flex;
+          
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          
+          padding-top: 18px;
+          padding-right: 20px;
+          padding-bottom: 18px;
+          padding-left: 20px;
+
+          background: linear-gradient(to bottom, #2c2c2c, #2c2c2c00);
+          
+          position: fixed;
+          z-index: 1;
+
+      }
+      
+      @media (max-width: 440px) {
         
-      margin: 0;
-      height: 100%;
-      background: #000;
-      color: #fff;
-      font-family: sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+        
+        .button {
+            
+            backdrop-filter: blur(10px);
+            background: #ffffff1a;
+
+        }
+        
+      }
+      
+      .one {
+          
+          width: 100%;
+          height: auto;
+          
+          display: flex;
+          
+          flex-direction: сolumn;
+          align-items: center;
+          justify-content: center;
+          
+          padding-top: 80px;
+          padding-right: 20px;
+          padding-bottom: 80px;
+          padding-left: 20px;
+
+          
+          
+      }
+      
+      .button {
+
+        width: 40px;
+        height: 40px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 20px;
+
+        overflow: hidden;
+        
+        transition: transform 0.2s ease;
+
+      }
+      .button:hover {
+          
+          backdrop-filter: blur(20px);
+          background: #ffffff1a;
+
+      }
+      
+      
+    
       
   </style>
 </head>
 <body>
-  привет дитя !
+    
+    <!-- Верх -->
+    <div class="space-between">
+        <div class="button">✦</div>
+        <div style="font-size: 18px;"
+            >Название</div>
+        <div class="button">☀︎</div>
+        
+    </div>
+    
+    
+    <div
+        style="margin-top: 76px;"
+        class="one"
+        >Первое сообщение
+    </div>
+    
+    
+    <div class="one">Изображение
+    </div>
+    
+    
+    <div class="one">Сообщение
+    </div>
+    
+    
+    <div class="one">Пример
+    </div>
+    
+    
+    <div class="one">Лучше чем ...
+    </div>
+    
+    
+    <div class="one">Последнее сообщение
+    </div>
+    
 </body>
 </html>
