@@ -100,6 +100,9 @@
           gap: 0px;
           position: static;
           z-index: auto; }
+      a {
+          text-decoration: none;
+          color: inherit; }
       .space-between {
           width: 100%;
           display: flex;
@@ -155,46 +158,62 @@
     <!-- Верх -->
     <div
          class="space-between">
+            <a
+                href="https://www.behance.net/rikhardflame"
+                target="_blank">
+                <div
+                    class="button"
+                    style="
+                        height: 40px;
+                        width: 40px;
+                        font-size: 18px;">
+                    I'm</div></a>
+            <h1
+                style="
+                    font-size: 18px;
+                    font-weight: 500;">
+                Ведение дел</h1>
             <div
                 class="button"
                 style="
-                  font-size: 18px;
-                  width: 40px;
-                  height: 40px;"
-                >EN</div>
-            <div
-                style="font-size: 18px;"
-                >Ведение дел</div>
-            <div
-                class="button"
-                style="
-                  width: 40px;
-                  height: 40px;"
-                onclick="this.innerText=(d=document.documentElement).getAttribute('view')=='light'?(d.setAttribute('view','dark'),'☽'):(d.setAttribute('view','light'),'☀︎')">☽</div> </div>
-    <!-- №А Сообщение -->
+                    height: 40px;
+                    width: 40px;"
+                onclick="this.innerText=(d=document.documentElement).getAttribute('view')=='light'?(d.setAttribute('view','dark'),'☽'):(d.setAttribute('view','light'),'☀︎')">☽</div></div>
+    <!-- № Сообщения -->
     <div
         class="one"
         style="
             max-width: 720px;
-            text-align: center;
             margin-top: 76px;
-            font-size: 48px;"
-            
-            >Начни вести дела без оплаты уже сейчас!
-            
-            <div
-                class="button"
-                style="
-                    padding-top: 9px;
-                    padding-right: 18px;
-                    padding-bottom: 9px;
-                    padding-left: 18px;
-                    font-size: 18px;"
-
-                >Войти
-
-            </div>
-            
-    </div>
+            font-size: 48px;">
+        <div
+            style="
+                border-radius: 28px;
+                overflow: hidden;
+                height: 96px;
+                width: 96px;">
+                <img
+                    src="pics/large.png"
+                    style="
+                        width: 100%;
+                        display: block;"></div>
+        <!-- Сообщение -->
+        <h1
+            style="
+                max-width: 720px;
+                text-align: center;
+                font-weight: 300;
+                font-size: 48px;">
+            Начни вести дела без оплаты уже сейчас!</h1>
+        <!-- Бутон -->
+        <div
+            class="button"
+            style="
+                font-size: 18px;
+                padding-top: 9px;
+                padding-right: 18px;
+                padding-bottom: 9px;
+                padding-left: 18px;"
+            >Войти</div> </div>
 </body>
 </html>
