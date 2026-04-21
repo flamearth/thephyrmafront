@@ -39,120 +39,118 @@
         content="width=device-width, initial-scale=1.0">
   
   <style>
-      
+      /* pallete */
+      :root {
+          /* dark */
+           /* 100% */
+          --000: #2c2c2c;
+          --808: #FFFFFF;
+           /* 85% */
+          --00085: #000000D9;
+          --80885: #FFFFFFD9;
+           /* 65% */
+          --00065: #000000A6;
+          --80865: #FFFFFFA6;
+           /* 35% */
+          --00035: #00000059;
+          --80835: #FFFFFF59;
+            /* 10% */
+          --00010: #0000001A;
+          --80810: #FFFFFF1A;
+           /* 0% */
+          --0000: #2c2c2c00;
+          --8080: #FFFFFF00; }
+      /* light */
+      html[view="light"] {
+           /* 100% */
+          --000: #FFFFFF;
+          --808: #2c2c2c;
+           /* 85% */
+          --00085: #FFFFFFD9;
+          --80885: #000000D9;
+           /* 65% */
+          --00065: #FFFFFFA6;
+          --80865: #000000A6;
+           /* 35% */
+          --00035: #FFFFFF59;
+          --80835: #00000059;
+            /* 10% */
+          --00010: #0000001A;
+          --80810: #FFFFFF1A;
+           /* 0% */
+          --0000: #FFFFFF00;
+          --8080: #2c2c2c00; }
+      * {
+          box-sizing: border-box; }
       html {
           width: 100%;
           height: 100%;
           display: block;
-          background: #2c2c2c;
-          color: #ffffff;
-          font-size: 21px;
-          font-weight: 300;
-          font-family: sans-serif;  }
-
-      * {
-        box-sizing: border-box;
-      }
-      
+          background: var(--000);
+          color: var(--808);
+          font-family: sans-serif;
+          font-weight: 300; }
       body {
           width: 100%;
-          
-          
           display: flex;
           flex-direction: column;
           align-items: center;
-          
-          background: #2c2c2c;
-          
+          background: var(--000);
           padding: 0px;
           margin: 0px;
           gap: 0px;
-          
           position: static;
           z-index: auto; }
-
       .space-between {
-          
           width: 100%;
-          height: auto;
-          
           display: flex;
-          
           flex-direction: row;
-          align-items: center;
           justify-content: space-between;
-          
+          align-items: center;
+           
           padding-top: 18px;
           padding-right: 20px;
           padding-bottom: 18px;
           padding-left: 20px;
-
-          background: linear-gradient(to bottom, #2c2c2c, #2c2c2c00);
+           
+          background: linear-gradient(to bottom, var(--000), var(--0000));
           
           position: fixed;
-          z-index: 1;
-
-      }
-      
-      @media (max-width: 440px) {
-        
-        
-        .button {
-            
-            backdrop-filter: blur(10px);
-            background: #ffffff1a;
-
-        }
-        
-      }
-      
+          z-index: 1; }
       .one {
-          
           width: 100%;
           height: auto;
-          
           display: flex;
-          
-          flex-direction: сolumn;
+          flex-direction: column;
           align-items: center;
           justify-content: center;
-          
           padding-top: 80px;
           padding-right: 20px;
           padding-bottom: 80px;
           padding-left: 20px;
-
-          
-          
-      }
-      
+          gap: 20px; }
       .button {
-
-        width: 40px;
-        height: 40px;
-
-        display: flex;
-
-        align-items: center;
-        justify-content: center;
-
-        border-radius: 20px;
-
-        overflow: hidden;
-        
-        transition: transform 0.2s ease;
-
-      }
+          width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 20px;
+          overflow: hidden;
+          transition: transform 0.2s ease; }
       .button:hover {
-          
-          backdrop-filter: blur(20px);
-          background: #ffffff1a;
-
-      }
-      
-      
-    
-      
+          backdrop-filter: blur(10px);
+          background: var(--80810); }
+      /* Смена вида */
+      html[view="light"] .button:hover {
+          background: var(--00010); }
+      @media (max-width: 440px) {
+          .space-between {
+              padding-right: 20px;
+              padding-left: 20px; }
+          .button {
+              backdrop-filter: blur(10px);
+              background: var(--0010); }
   </style>
 </head>
 <body>
@@ -162,7 +160,7 @@
         <div class="button">✦</div>
         <div style="font-size: 18px;"
             >Название</div>
-        <div class="button">☀︎</div>
+        <div class="button"onclick="this.innerText=(d=document.documentElement).getAttribute('view')=='light'?(d.setAttribute('view','dark'),'☀︎'):(d.setAttribute('view','light'),'☾')">☀︎</div>
         
     </div>
     

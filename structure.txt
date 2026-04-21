@@ -1,27 +1,10 @@
 firma/
-	east/
-		view/
-			columns.css
-			rows.css
-			figures.css
-		strings/
-			letters.css
-			InterDisplay-SemiBold.woff2
-			InterDisplay-Medium.woff2
-			InterDisplay-Regular.woff2
-			InterDisplay-Light.woff2
-			InterDisplay-ExtraLight.woff2
-			signs.css
-			EnterDisplay-Sings.woff
-		languages/
-			english.json
-		appearance/
-			actions.js
-			palette.css
-		images/
-			english.png
-		signs/
-			sign.svg
 	index.html
+	languages/
+		english.json
+	pics/
+		preview.png
+		small.png
+		small.png
 	service/
 	server/
