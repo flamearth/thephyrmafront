@@ -113,25 +113,51 @@
                 background: var(--00010); }
     </style>
     <script>
-        // применить тему при загрузке
         (function () {
             const saved = localStorage.getItem('view');
             if (saved) {
                 document.documentElement.setAttribute('view', saved);
             } else {
                 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                document.documentElement.setAttribute('view', prefersDark ? 'dark' : 'light'); }
-        // следить за сменой темы устройства
-        const media = window.matchMedia('(prefers-color-scheme: dark)');
+                document.documentElement.setAttribute('view', prefersDark? 'dark' : 'light');
+            }
+            const media = window.matchMedia('(prefers-color-scheme: dark)');
             media.addEventListener('change', (e) => {
-                 if (!localStorage.getItem('view')) {
-                document.documentElement.setAttribute('view', e.matches ? 'dark' : 'light'); }
+                if (!localStorage.getItem('view')) {
+                    document.documentElement.setAttribute('view', e.matches? 'dark' : 'light');
+                }
             });
         })();
     </script>
 </head>
 <body>
-    <!-- № Сообщения -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const params = new URLSearchParams(location.search);
+        const redirectUrl = params.get('redirect') || '/applications/deals/regions/kazakhstan/english.html';
+        
+        const lang = localStorage.getItem('lang');
+        const country = localStorage.getItem('country');
+        
+        if (lang && country) {
+            const fixedUrl = redirectUrl.replace(
+                /\/regions\/[^\/]+\/(english|russian|kazakh)\.html/,
+                `/regions/${country}/${lang}.html`
+            );
+            if (location.pathname!== new URL(fixedUrl, location.origin).pathname) {
+                location.replace(fixedUrl);
+            }
+            return;
+        }
+
+        document.querySelectorAll('a[href*="localization/regions/"]').forEach(a => {
+            const url = new URL(a.href, location.origin);
+            url.searchParams.set('redirect', redirectUrl);
+            a.href = url.toString();
+        });
+    });
+    </script>
+    <!--Добро пожаловать -->
     <div
         class="one"
         style="
