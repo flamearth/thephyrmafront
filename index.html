@@ -1,14 +1,14 @@
 <!-- Установки страницы -->
 <html view="dark">
 <head>
-    <title>Deals</title>
+    <title>zefirma</title>
     <!-- Кодировка языка -->
     <meta
         charset="utf-8">
     <!-- Кодировки цветов -->
     <link
         rel="stylesheet"
-        href="server/colors.css">
+        href="sourse/colors.css">
     <!-- Лицо: Большое -->
     <link
         rel="apple-touch-icon"
@@ -32,7 +32,7 @@
     <!-- Ссылка -->
     <meta
         property="og:url"
-        content="https://name.name/">
+        content="https://name.name/index.html">
     <!-- Адаптация -->
     <meta
         name="viewport"
@@ -131,58 +131,12 @@
     </script>
 </head>
 <body>
-    <!-- Верх -->
-    <div
-         class="space-between">
-            <!-- Первый бутон -->
-            <a
-                href="https://www.behance.net/rikhardflame"
-                class="button"
-                style="
-                    height: 40px;
-                    width: 40px;
-                    font-size: 18px;">
-                Я</a>
-            <!-- Название -->
-            <h1
-                style="
-                    font-size: 18px;
-                    font-weight: 500;">
-                Ведение дел
-                </h1>
-            <!-- Второй бутон -->
-            <div
-                class="button"
-                style="
-                    height: 40px;
-                    width: 40px;"
-                onclick="
-                    const d = document.documentElement;
-                    const isLight = d.getAttribute('view') === 'light';
-                    const newView = isLight ? 'dark' : 'light';
-                    d.setAttribute('view', newView);
-                    localStorage.setItem('view', newView);
-                    this.innerText = isLight ? '☽' : '☀︎';
-                    ">☽
-                </div>
-            </div>
     <!-- № Сообщения -->
     <div
         class="one"
         style="
-            margin-top: 76px;
+            margin-top: 0px;
             font-size: 48px;">
-        <div
-            style="
-                border-radius: 28px;
-                 overflow: hidden;
-                height: 96px;
-                width: 96px;">
-                <img
-                    src="pics/large.png"
-                    style="
-                        width: 100%;
-                        display: block;"></div>
         <!-- Сообщение -->
         <h1
             style="
@@ -190,18 +144,22 @@
                 text-align: center;
                 font-weight: 300;
                 font-size: 48px;">
-            Начни вести дела без оплаты уже сейчас!</h1>
+            Welcome to zefirma</h1>
         <!-- Бутон -->
         <a
-            href="services/entrance.html"
             class="button"
-            style="
+            style=
+                "
                 font-size: 18px;
+                
                 padding-top: 9px;
                 padding-right: 18px;
                 padding-bottom: 9px;
-                padding-left: 18px;"
-            >Войти</a>
-        <div
+                padding-left: 18px;
+                "
+            href="localization/regions/kazakhstan.html"
+            >Kazakhstan
+            </a>
+        </div>
 </body>
 </html>
