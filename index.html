@@ -1,191 +1,268 @@
-<!-- Установки страницы -->
-<html view="dark">
-<head>
-    <title>zefirma</title>
-    <!-- Кодировка языка -->
-    <meta
-        charset="utf-8">
-    <!-- Кодировки цветов -->
-    <link
-        rel="stylesheet"
-        href="sourse/colors.css">
-    <!-- Лицо: Большое -->
-    <link
-        rel="apple-touch-icon"
-        href="pics/large.png">
-    <!-- Лицо: Маленькое -->
-    <link
-        rel="icon"
-        href="pics/small.png">
-    <!-- Веб Сайт -->
-    <meta
-        property="og:type"
-        content="website">
-    <!-- Объяснение -->
-    <meta
-        name="description"
-        content="Description">
-    <!-- Обёртка -->
-    <meta
-        property="og:image"
-        content="https://name.name/pics/preview.png">
-    <!-- Ссылка -->
-    <meta
-        property="og:url"
-        content="https://name.name/index.html">
-    <!-- Адаптация -->
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0">
-    <style>
-        * {
-            box-sizing: border-box; }
-        a {
-            text-decoration: none;
-            color: inherit; }
-        html {
-            width: 100%;
-            height: 100%;
-            display: block;
-            background: var(--000);
-            color: var(--808);
-            font-family: sans-serif;
-            font-size: 21px;
-            font-weight: 300; }
-        body {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background: var(--000);
-            padding: 0px;
-            margin: 0px;
-            gap: 0px;
-            position: static;
-            z-index: auto; }
-        .space-between {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-             
-            padding-top: 18px;
-            padding-right: 20px;
-            padding-bottom: 18px;
-            padding-left: 20px;
-             
-            background: linear-gradient(to bottom, var(--000), var(--0000));
-            
-            position: fixed;
-            z-index: 1; }
-        .one {
-            width: 100%;
-            height: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding-top: 80px;
-            padding-right: 20px;
-            padding-bottom: 80px;
-            padding-left: 20px;
-            gap: 20px; }
-        .button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 20px;
-            overflow: hidden;
-            transition: transform 0.2s ease; }
-        .button:hover {
-            backdrop-filter: blur(10px);
-            background: var(--80810); }
-        /* Смена вида */
-        html[view="light"] .button:hover {
-            background: var(--00010); }
-        @media (max-width: 440px) {
-            .space-between {
-                padding-right: 20px;
-                padding-left: 20px; }
-            .button {
-                backdrop-filter: blur(10px);
-                background: var(--00010); }
-    </style>
-    <script>
-        (function () {
-            const saved = localStorage.getItem('view');
-            if (saved) {
-                document.documentElement.setAttribute('view', saved);
-            } else {
-                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                document.documentElement.setAttribute('view', prefersDark? 'dark' : 'light');
-            }
-            const media = window.matchMedia('(prefers-color-scheme: dark)');
-            media.addEventListener('change', (e) => {
-                if (!localStorage.getItem('view')) {
-                    document.documentElement.setAttribute('view', e.matches? 'dark' : 'light');
+<!doctype html>
+<html>
+    <head>
+        <title>Leading a deals</title>
+        <!-- Кодировка языка -->
+        <meta
+            charset="utf-8"
+            >
+        <!-- Лицо: Большое -->
+        <link
+            rel="apple-touch-icon"
+            href="large.png"
+            >
+        <!-- Лицо: Маленькое -->
+        <link
+            rel="icon"
+            href="small.png"
+            >
+        <!-- Тип -->
+        <meta
+            property="og:type"
+            content="website"
+            >
+        <!-- Объяснение -->
+        <meta
+            name="description"
+            content="Let's start counting and leading your usual deals now and get your profit immediately"
+            >
+        <!-- Обёртка -->
+        <meta
+            property="og:image"
+            content="https://name.name/deals/preview.png">
+        <!-- Ссылка -->
+        <meta
+            property="og:url"
+            content="https://name.name/main.html"
+            >
+        <!-- Адаптация -->
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+            >
+        <style>
+            :root
+                 {
+                /* 100% */
+                --1111: #2c2c2c;
+                --9191: #FFFFFF;
+                /* 85% */
+                --11185: #000000D9;
+                --91985: #FFFFFFD9;
+                /* 65% */
+                --11165: #000000A6;
+                --91965: #FFFFFFA6;
+                /* 35% */
+                --11135: #00000059;
+                --91935: #FFFFFF59;
+                /* 10% */
+                --11110: #0000001A;
+                --91910: #FFFFFF1A;
+                /* 0% */
+                --1110: #2c2c2c00;
+                --9190: #FFFFFF00;
                 }
-            });
-        })();
-    </script>
-</head>
-<body>
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const params = new URLSearchParams(location.search);
-        const redirectUrl = params.get('redirect') || '/applications/deals/regions/kazakhstan/english.html';
-        
-        const lang = localStorage.getItem('lang');
-        const country = localStorage.getItem('country');
-        
-        if (lang && country) {
-            const fixedUrl = redirectUrl.replace(
-                /\/regions\/[^\/]+\/(english|russian|kazakh)\.html/,
-                `/regions/${country}/${lang}.html`
-            );
-            if (location.pathname!== new URL(fixedUrl, location.origin).pathname) {
-                location.replace(fixedUrl);
-            }
-            return;
-        }
-
-        document.querySelectorAll('a[href*="localization/regions/"]').forEach(a => {
-            const url = new URL(a.href, location.origin);
-            url.searchParams.set('redirect', redirectUrl);
-            a.href = url.toString();
-        });
-    });
-    </script>
-    <!--Добро пожаловать -->
-    <div
-        class="one"
-        style="
-            margin-top: 0px;
-            font-size: 48px;">
-        <!-- Сообщение -->
-        <h1
-            style="
-                max-width: 720px;
-                text-align: center;
+            *
+                {
+                box-sizing: border-box;
+                }
+            a
+                {
+                text-decoration: none;
+                color: inherit;
+                }
+            html
+                {
+                width: 100%;
+                height: 100%;
+                display: block;
+                background: var(--1111);
+                color: var(--9191);
+                font-family: sans-serif;
+                font-size: 21px;
                 font-weight: 300;
-                font-size: 48px;">
-            Welcome to zefirma</h1>
-        <!-- Бутон -->
-        <a
-            class="button"
+                }
+            body
+                {
+                width: 100%;
+                 
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                 
+                background: var(--111);
+                 
+                padding: 0px;
+                margin: 0px;
+                gap: 20px;
+                 
+                position: static;
+                z-index: auto;
+                }
+            .space-between
+                {
+                width: 100%;
+                 
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                 
+                padding-top: 18px;
+                padding-right: 20px;
+                padding-bottom: 18px;
+                padding-left: 20px;
+                 
+                background: linear-gradient(to bottom, var(--1111), var(--1110));
+                
+                position: fixed;
+                z-index: 1;
+                 }
+            .button
+                {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 20px;
+                overflow: hidden;
+                transition: transform 0.2s ease;
+                }
+            .button:hover
+                {
+                backdrop-filter: blur(10px);
+                background: var(--91910);
+                }
+            @media (max-width: 440px)
+                {
+                .space-between
+                    {
+                    padding-right: 30px;
+                    padding-left: 30px;
+                    }
+                .button
+                    {
+                    backdrop-filter: blur(10px);
+                    background: var(--91910);
+                    }
+                }
+            </style>
+        </head>
+    <body>
+        <!-- Верх -->
+        <div
+             class="space-between"
+            >
+                <!-- Фирма -->
+                <a
+                    href="../index.html"
+                    class="button"
+                    style=
+                        "
+                        height: 40px;
+                        width: 40px;
+                        font-size: 21px;
+                        "
+                    >ze
+                    </a>
+                <!-- Название -->
+                <h1
+                    style=
+                        "
+                        font-size: 18px;
+                        font-weight: 500;
+                        "
+                    >Leading a deals
+                    </h1>
+                <!-- Продолжить -->
+                <a
+                    href="?/?.html"
+                    class="button"
+                    style=
+                        "
+                        height: 40px;
+                        width: 40px;
+                        font-size: 21px;
+                        "
+                    >?
+                    </a>
+                </div>
+        <!-- Ряд -->
+        <div
             style=
                 "
-                font-size: 18px;
-                
-                padding-top: 9px;
-                padding-right: 18px;
-                padding-bottom: 9px;
-                padding-left: 18px;
+                width: 100%;
+                 
+                display: flex;
+                 
+                margin-top: 78px;
+                 
+                gap: 20px;
+                 
+                padding-left: 20px;
+                padding-right: 20px;
+                 
+                padding-top: 80px;
+                padding-bottom: 80px;
+                 
+                flex-direction: column;
+                justify-content: center;
+                align-items: center; 
                 "
-            href="localization/regions/kazakhstan.html"
-            >Kazakhstan
-            </a>
-        </div>
-</body>
-</html>
+            >
+                <!-- Изображение -->
+                <div
+                    style=
+                        "
+                        height: 96px;
+                        width: 96px;
+                         
+                        display: flex;
+                        flex-direction: column;
+                         
+                        border-radius: 28px;
+                        overflow: hidden;
+                        "
+                    >
+                        <img
+                            src="large.png"
+                            style=
+                                "
+                                width: 100%;
+                                display: block;
+                                "
+                            >
+                        </div>
+                <!-- Имя -->
+                <h1
+                    style=
+                        "
+                        max-width: 720px;
+                         
+                        font-size: 48px;
+                        font-weight: 300;
+                        text-align: center;
+                         
+                        margin: 0;
+                        padding: 0;
+                         
+                        color: var(--9191);
+                        "
+                    > Let's get start leading your deals without payment!
+                    </h1>
+                <!-- Войти -->
+                <a
+                    href="services/entrance.html"
+                    class="button"
+                    style=
+                        "
+                        font-size: 21px;
+                         
+                        padding-top: 9px;
+                        padding-right: 18px;
+                        padding-bottom: 9px;
+                        padding-left: 18px;
+                        "
+                    >Begin
+                    </a>
+        </body>
+    </html>
