@@ -1,3 +1,4 @@
+<!doctype html>
 <html>
     <head>
         <title
@@ -89,6 +90,8 @@
             *
                 {
                 box-sizing: border-box;
+                margin: 0;
+                padding: 0;
                 }
             a
                 {
@@ -144,7 +147,7 @@
                  }
             .button
                 {
-                display: flex;
+                display: inline-flex;
                 align-items: center;
                 justify-content: center;
                 border-radius: 20px;
@@ -252,26 +255,27 @@
                                 max-width: 720px;
                                  
                                 font-size: 48px;
-                                font-weigth: 300;
+                                font-weight: 200;
                                 "
                             >
                                 3 days free, then:
                             </h1>
                         <!-- Подробнее о условиях -->
                         <a
+                            href="documents/terms.html"
                             class="button"
                             style=
                                 "
-                                width: fit-content;
+                                font-size: 21px;
                                  
-                                padding-top: 18px;
-                                padding-left: 9px;
-                                padding-bottom: 9px;
+                                padding-top: 9px;
                                 padding-right: 18px;
+                                padding-bottom: 9px;
+                                padding-left: 18px;
                                 "
-                            >
-                                More about terms
+                            >More about terms
                             </a>
+                    </div>
                 <!-- Ежемесячно -->
                 <div
                     style=
@@ -287,10 +291,7 @@
                          
                         border-radius: 24px;
                          
-                        padding-left: 20px;
-                        padding-right: 20px;
-                        padding-top: 20px;
-                        padding-bottom: 20px;
+                        padding: 20px;
                          
                         background: var(--91910);
                          
@@ -303,6 +304,7 @@
                         <h3
                             style=
                                 "
+                                margin: 0;
                                 font-family: serif;
                                 font-weight: 500;
                                 font-style: italic;
@@ -311,33 +313,112 @@
                             >
                                 Monthly
                                 </h3>
+                        <!-- Сумма -->
                         <h3
                             style=
                                 "
+                                margin: 0;
                                 font-family: sans-serif;
-                                font-weight: 300;
-                                font-size: 96px;
+                                font-weight: 100;
+                                font-size: 128px;
                                 "
                             >
                                 5£
                                 </h3>
                         <!-- Выбрать -->
                         <a
-                            class="button"
+                            href="#"
                             style=
                                 "
-                                width: fit-content;
+                                display: inline-flex;
+                                align-items: center;
+                                justify-content: center;
                                  
-                                padding-top: 18px;
-                                padding-left: 9px;
-                                padding-bottom: 9px;
+                                font-size: 21px;
+                                border-radius: 24px;
+                                 
+                                padding-top: 9px;
                                 padding-right: 18px;
+                                padding-bottom: 9px;
+                                padding-left: 18px;
+                                 
+                                background: var(--91910);
                                 "
-                            >
-                                More about terms
+                            >Select
                             </a>
                     </div>
                 <!-- Ежегодно -->
+                <div
+                    style=
+                        "
+                        width: 100%;
+                        max-width: 400px;
+                        aspect-ratio: 3 / 4;
+                         
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: center;
+                         
+                        border-radius: 24px;
+                         
+                        padding: 20px;
+                         
+                        background: var(--91910);
+                         
+                        transition: transform 0.6s ease;
+                        "
+                    onmouseover="this.style.transform='scale(1.1)'"
+                    onmouseout="this.style.transform='scale(1)'"
+                    >
+                        <!-- Мера -->
+                        <h3
+                            style=
+                                "
+                                margin: 0;
+                                font-family: serif;
+                                font-weight: 500;
+                                font-style: italic;
+                                color: var(--91965);
+                                "
+                            >
+                                Yearly
+                                </h3>
+                        <!-- Сумма -->
+                        <h3
+                            style=
+                                "
+                                margin: 0;
+                                font-family: sans-serif;
+                                font-weight: 100;
+                                font-size: 128px;
+                                "
+                            >
+                                50£
+                                </h3>
+                        <!-- Выбрать -->
+                        <a
+                            href="#"
+                            style=
+                                "
+                                display: inline-flex;
+                                align-items: center;
+                                justify-content: center;
+                                 
+                                font-size: 21px;
+                                border-radius: 24px;
+                                 
+                                padding-top: 9px;
+                                padding-right: 18px;
+                                padding-bottom: 9px;
+                                padding-left: 18px;
+                                 
+                                background: var(--91910);
+                                "
+                            >Select
+                            </a>
+                    </div>
             </div>
         </body>
     </html>
+
