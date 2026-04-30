@@ -1,39 +1,45 @@
 <!doctype html>
 <html>
     <head>
-        <title>Entrance</title>
+        <title
+            >Entrance
+            </title>
         <!-- Кодировка языка -->
         <meta
-            charset="utf-8"
-            >
-        <!-- Лицо: Большое -->
-        <link
-            rel="apple-touch-icon"
-            href="../large.png"
+            charset=
+                "utf-8"
             >
         <!-- Лицо: Маленькое -->
         <link
-            rel="icon"
-            href="../small.png"
+            rel=
+                "icon"
+            href=
+                "/content/small.png"
             >
         <!-- Веб Сайт -->
         <meta
-            property="og:type"
-            content="website"
+            property=
+                "og:type"
+            content=
+                "website"
             >
         <!-- Объяснение -->
         <meta
-            name="description"
-            content="Create or log in your personal account"
+            name=
+                "description"
+            content=
+                "Create or log in your personal account"
             >
         <!-- Обёртка -->
         <meta
-            property="og:image"
-            content="https://name.name/deals/preview.png">
+            property=
+                "og:image"
+            content=
+                "https://thephyrma.com/content/preview.png">
         <!-- Ссылка -->
         <meta
             property="og:url"
-            content="https://name.name/services/entrance.html"
+            content="https://thephyrma.com/entrance/entrance.html"
             >
         <!-- Адаптация -->
         <meta
@@ -44,7 +50,7 @@
             :root
                  {
                 /* 100% */
-                --1111: #2c2c2c;
+                --1111: #000000;
                 --9191: #FFFFFF;
                 /* 85% */
                 --11185: #000000D9;
@@ -59,7 +65,7 @@
                 --11110: #0000001A;
                 --91910: #FFFFFF1A;
                 /* 0% */
-                --1110: #2c2c2c00;
+                --1110: #00000000;
                 --9190: #FFFFFF00;
                 }
             *
@@ -177,7 +183,7 @@
                     </h1>
                 <!-- Продолжить -->
                 <a
-                    href="services/account.html"
+                    href="/account/account.html"
                     class="button"
                     style=
                         "
@@ -198,14 +204,11 @@
                 display: flex;
                 flex-direction: column;
                  
-                border-radius: 28px;
+                border-radius: 24px;
                  
-                padding-top: 16px;
-                padding-right: 20px;
-                padding-bottom: 16px;
-                padding-left: 20px;
+                padding: 0px;
                  
-                gap: 16px;
+                gap: 0px;
                  
                 margin-top: 78px;
                 margin-left: 20px;
@@ -215,26 +218,45 @@
                 background: var(--91910);
                 "
             >
-                <!-- Имя -->
+                <!-- адрес -->
                 <input
                     style=
                         "
-                        width: 100%;
+                        width: auto;
                          
                         color: inherit;
                         font: inherit;
                         text-align: center;
                          
                         border: none;
+                        border-radius: 20px;
                         outline: none;
+                         
                         appearance: none;
+                         
+                        background-color: transparent;
+                          
+                        margin-top: 6px;
+                        margin-right: 6px;
+                        margin-bottom: 6px;
+                        margin-left: 6px;
+                          
+                        padding-top: 9px;
+                        padding-right: 14px;
+                        padding-bottom: 9px;
+                        padding-left: 14px;
                          
                         -webkit-appearance: none;
                         -moz-appearance: none;
                          
-                        background: transparent;
+                        transition: background 0.2s ease;
                         "
-                     type="text"
+                    onfocus=
+                        "this.style.background='var(--91910)'"
+                    onblur=
+                        "this.style.background='transparent'"
+                     type=
+                        "email"
                      placeholder="inbox@mail.space"
                     >
                 <!-- Черта -->
@@ -242,7 +264,8 @@
                     style=
                         "
                         height: 1.5px;
-                        width: 100%;
+                        margin-right: 20px;
+                        margin-left: 20px;
                         background: var(--91910);
                         "
                     >
@@ -251,21 +274,37 @@
                 <input
                     style=
                         "
-                        width: 100%;
+                        width: auto;
                          
                         color: inherit;
                         font: inherit;
                         text-align: center;
                          
                         border: none;
+                        border-radius: 20px;
                         outline: none;
-                         
-                        background: transparent;
-                         
+                        background-color: transparent;
                         appearance: none;
+                          
+                        margin-top: 6px;
+                        margin-right: 6px;
+                        margin-bottom: 6px;
+                        margin-left: 6px;
+                          
+                        padding-top: 9px;
+                        padding-right: 14px;
+                        padding-bottom: 9px;
+                        padding-left: 14px;
+                         
                         -webkit-appearance: none;
                         -moz-appearance: none;
+                        transition: background 0.2s ease;
+                         
                         "
+                    onfocus=
+                        "this.style.background='var(--91910)'"
+                    onblur=
+                        "this.style.background='transparent'"
                      type="text"
                      placeholder="• • • • • • • • • • •"
                     >
@@ -274,7 +313,8 @@
                     style=
                         "
                         height: 1.5px;
-                        width: 100%;
+                        margin-right: 20px;
+                        margin-left: 20px;
                         background: var(--91910);
                         "
                     >
@@ -285,9 +325,16 @@
                         "
                         font-size: 18px;
                         text-align: center;
-                         
-                        margin: 0;
-                        padding: 0;
+                          
+                        margin-top: 6px;
+                        margin-right: 6px;
+                        margin-bottom: 6px;
+                        margin-left: 6px;
+                          
+                        padding-top: 9px;
+                        padding-right: 14px;
+                        padding-bottom: 9px;
+                        padding-left: 14px;
                          
                         color: var(--91965);
                         "
